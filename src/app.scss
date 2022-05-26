@@ -1,0 +1,14 @@
+.app {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background-color: #8F9E8B;
+  
+    .section {
+      height: calc(100vh - 70px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: 70px;
+    }
+  }
