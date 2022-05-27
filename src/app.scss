@@ -2,6 +2,9 @@
     font-family: "Roboto", sans-serif;
     height: 100vh;
     background-color: #8F9E8B;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   
     .section {
       height: calc(100vh - 70px);
