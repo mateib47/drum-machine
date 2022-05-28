@@ -12,6 +12,14 @@
     }
     .middle{
         flex:0.8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        .row{
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
     .bottom{
         flex:0.2;

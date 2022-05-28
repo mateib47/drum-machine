@@ -1,0 +1,12 @@
+.drum-pad {
+  background-color: #412a22;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
