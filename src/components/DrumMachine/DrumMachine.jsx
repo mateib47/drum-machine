@@ -4,15 +4,15 @@ import DrumPad from "../Pad/DrumPad";
 
 const DrumMachine = () => {
   const data = [
-    { text: "Q", id: "sound1" },
-    { text: "W", id: "sound2" },
-    { text: "E", id: "sound3" },
-    { text: "A", id: "sound4" },
-    { text: "S", id: "sound5" },
-    { text: "D", id: "sound6" },
-    { text: "Z", id: "sound7" },
-    { text: "X", id: "sound8" },
-    { text: "C", id: "sound9" },
+    { text: "Q", id: "sound1", sound:"punch" },
+    { text: "W", id: "sound2", sound:"punch" },
+    { text: "E", id: "sound3", sound:"punch" },
+    { text: "A", id: "sound4", sound:"punch" },
+    { text: "S", id: "sound5", sound:"punch" },
+    { text: "D", id: "sound6", sound:"punch" },
+    { text: "Z", id: "sound7", sound:"punch" },
+    { text: "X", id: "sound8", sound:"punch" },
+    { text: "C", id: "sound9", sound:"punch" },
   ];
 
   return (
@@ -21,17 +21,17 @@ const DrumMachine = () => {
       <div className="middle">
         <div className="row">
         {data.slice(0,3).map((item) => (
-          <DrumPad id={item.id} text={item.text} />
+          <DrumPad id={item.id} text={item.text} sound={item.sound} />
         ))}
         </div>
         <div className="row">
         {data.slice(3,6).map((item) => (
-          <DrumPad id={item.id} text={item.text} />
+          <DrumPad id={item.id} text={item.text} sound={item.sound} />
         ))}
         </div>
         <div className="row">
         {data.slice(6,10).map((item) => (
-          <DrumPad id={item.id} text={item.text} />
+          <DrumPad id={item.id} text={item.text} sound={item.sound} />
         ))}
         </div>
 
