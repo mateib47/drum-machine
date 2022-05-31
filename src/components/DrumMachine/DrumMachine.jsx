@@ -1,8 +1,13 @@
 import "./drum.scss";
 import Display from "../Display/Display";
 import DrumPad from "../Pad/DrumPad";
+import { useState, useEffect } from "react";
 
 const DrumMachine = () => {
+  const [display, setDisplay] = useState("init");
+
+
+
   const data = [
     { text: "Q", id: "sound1", sound:"punch" },
     { text: "W", id: "sound2", sound:"punch" },
@@ -21,24 +26,24 @@ const DrumMachine = () => {
       <div className="middle">
         <div className="row">
         {data.slice(0,3).map((item) => (
-          <DrumPad id={item.id} text={item.text} sound={item.sound} />
+          <DrumPad id={item.id} text={item.text} sound={item.sound} setDisplay={setDisplay} />
         ))}
         </div>
         <div className="row">
         {data.slice(3,6).map((item) => (
-          <DrumPad id={item.id} text={item.text} sound={item.sound} />
+          <DrumPad id={item.id} text={item.text} sound={item.sound} setDisplay={setDisplay} />
         ))}
         </div>
         <div className="row">
         {data.slice(6,10).map((item) => (
-          <DrumPad id={item.id} text={item.text} sound={item.sound} />
+          <DrumPad id={item.id} text={item.text} sound={item.sound} setDisplay={setDisplay} />
         ))}
         </div>
 
 
       </div>
       <div className="bottom">
-        <Display />
+        <Display display={display}/>
       </div>
     </div>
   );

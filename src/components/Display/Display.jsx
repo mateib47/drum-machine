@@ -1,9 +1,9 @@
 import './display.scss';
 
-const Display = () => {
+const Display = ({display}) => {
   return (
     <div className='display' id='display'>
-        <div className="textArea"></div>
+        <div className="textArea">{display}</div>
     </div>
   )
 }
