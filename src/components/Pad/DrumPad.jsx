@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import sound1 from '../../sounds/punch.mp3'
 
 
-const DrumPad = ({ id, text, sound, setDisplay }) => {
+const DrumPad = ({ id, text, sound, setDisplay, power }) => {
     const startSound = (e) => {
-      console.log()
-      if (!e || e.code == "Key"+text){
+      
+      if (power && (!e || e.code == "Key"+text)){
         const soundElem =  document.getElementById(text);
         soundElem.currentTime = 0;
         soundElem.play();
