@@ -1,5 +1,5 @@
 .drum{
-    background-color: #5B7876;
+    background-color: #8F9E8B;
     width: 50vw;
     height: 70vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -9,6 +9,21 @@
     
     .top{
         flex:0.2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #f6f6f6;
+        font-weight: 400;
+
+        .power, .volume{
+            display: inherit;
+            justify-content: center;
+            align-items: inherit;
+        }
+
+        .volume{
+            width: 200px;
+        }
     }
     .middle{
         flex:0.8;
