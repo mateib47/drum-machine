@@ -8,6 +8,8 @@
     flex-direction: column;
     
     .top{
+        width: 90%;
+        margin: auto;
         flex:0.2;
         display: flex;
         justify-content: space-between;
@@ -21,9 +23,7 @@
             align-items: inherit;
         }
 
-        .volume{
-            width: 200px;
-        }
+        
     }
     .middle{
         flex:0.8;

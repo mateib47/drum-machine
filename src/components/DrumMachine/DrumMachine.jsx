@@ -2,11 +2,13 @@ import "./drum.scss";
 import Display from "../Display/Display";
 import DrumPad from "../Pad/DrumPad";
 import { useState, useEffect } from "react";
-import Switch from "@material-ui/core/Switch";
-//import Stack from "@material-ui/core/Stack";
-import Slider from "@material-ui/core/Slider";
-import VolumeDown from "@material-ui/icons/VolumeDown";
-import VolumeUp from "@material-ui/icons/VolumeUp";
+import Switch from "@mui/material/Switch";
+import Stack from "@mui/material/Stack";
+import Slider from "@mui/material/Slider";
+import VolumeDown from "@mui/icons-material/VolumeDown";
+import VolumeUp from "@mui/icons-material/VolumeUp";
+import Box from '@mui/material/Box';
+
 
 const DrumMachine = () => {
   const [display, setDisplay] = useState("");
@@ -34,9 +36,9 @@ const DrumMachine = () => {
     console.log(power);
   };
 
-  const changeVolume = () => {
-
-  }
+  const changeVolume = (event, newValue) => {
+    setVolume(newValue);
+  };
 
   return (
     <div className="drum" id="drum-machine">
@@ -53,13 +55,13 @@ const DrumMachine = () => {
           />
           <h3>On</h3>
         </div>
-        <div className="volume">
-          {/* <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center"> */}
+        <Box sx={{ width: 200 }}>
+          <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
             <VolumeDown />
-            <Slider aria-label="Volume" defaultValue={volume} onChange={changeVolume()} />
+            <Slider aria-label="Volume" value={volume} onChange={changeVolume} style={{overflow:'none'}}  />
             <VolumeUp />
-          {/* </Stack> */}
-        </div>
+          </Stack>
+        </Box>
       </div>
       <div className="middle">
         <div className="row">
@@ -70,6 +72,7 @@ const DrumMachine = () => {
               sound={item.sound}
               setDisplay={setDisplay}
               power={power}
+              volume={volume}
             />
           ))}
         </div>
@@ -81,6 +84,7 @@ const DrumMachine = () => {
               sound={item.sound}
               setDisplay={setDisplay}
               power={power}
+              volume={volume}
             />
           ))}
         </div>
@@ -92,6 +96,7 @@ const DrumMachine = () => {
               sound={item.sound}
               setDisplay={setDisplay}
               power={power}
+              volume={volume}
             />
           ))}
         </div>
