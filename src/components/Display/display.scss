@@ -1,9 +1,16 @@
 .display{
+        border-radius: 10px;
+
 
 
     .textArea{
-        background-color: #F2E6B6;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #f1ecd5;
         width: 25vw;
         height: 40px;
+        align-items: center;
+
     }
 }

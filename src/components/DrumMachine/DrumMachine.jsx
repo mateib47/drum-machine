@@ -7,8 +7,7 @@ import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
 import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeUp from "@mui/icons-material/VolumeUp";
-import Box from '@mui/material/Box';
-
+import Box from "@mui/material/Box";
 
 const DrumMachine = () => {
   const [display, setDisplay] = useState("");
@@ -17,15 +16,15 @@ const DrumMachine = () => {
   const label = { inputProps: { "aria-label": "Power" } };
 
   const data = [
-    { text: "Q", id: "sound1", sound: "punch" },
-    { text: "W", id: "sound2", sound: "bass" },
-    { text: "E", id: "sound3", sound: "punch" },
-    { text: "A", id: "sound4", sound: "punch" },
-    { text: "S", id: "sound5", sound: "punch" },
-    { text: "D", id: "sound6", sound: "punch" },
-    { text: "Z", id: "sound7", sound: "punch" },
-    { text: "X", id: "sound8", sound: "punch" },
-    { text: "C", id: "sound9", sound: "punch" },
+    { text: "Q", id: "sound1", sound: "Bass" },
+    { text: "W", id: "sound2", sound: "Punch" },
+    { text: "E", id: "sound3", sound: "Sticks" },
+    { text: "A", id: "sound4", sound: "Floor Tom" },
+    { text: "S", id: "sound5", sound: "Small Tom" },
+    { text: "D", id: "sound6", sound: "Medium Tom" },
+    { text: "Z", id: "sound7", sound: "Snare" },
+    { text: "X", id: "sound8", sound: "Hi Hat" },
+    { text: "C", id: "sound9", sound: "Ba Bum Tss" },
   ];
 
   const changePower = () => {
@@ -56,9 +55,23 @@ const DrumMachine = () => {
           <h3>On</h3>
         </div>
         <Box sx={{ width: 200 }}>
-          <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+          <Stack spacing={2} direction="row" sx={{ mb: 1}} alignItems="center">
             <VolumeDown />
-            <Slider aria-label="Volume" value={volume} onChange={changeVolume} style={{overflow:'none'}}  />
+            <Slider
+              aria-label="Volume"
+              value={volume}
+              onChange={changeVolume}
+              sx={{
+                color: "#412a22",
+                padding:'30px 0',
+                "& .MuiSlider-thumb": {
+                  overflow: "hidden",
+                  width:'12px',
+                  height:'12px',
+                  margin:'0 6px',
+                },
+              }}
+            />
             <VolumeUp />
           </Stack>
         </Box>
