@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/drum-machine/static/css/main.2f0acf25.css",
+    "main.js": "/drum-machine/static/js/main.a4763035.js",
+    "static/media/Ba Bum Tss.mp3": "/drum-machine/static/media/Ba Bum Tss.aec89960705404da0fc8.mp3",
+    "static/media/Medium Tom.mp3": "/drum-machine/static/media/Medium Tom.37622017b7fec0bf30c0.mp3",
+    "static/media/Floor Tom.mp3": "/drum-machine/static/media/Floor Tom.37328fc663208b3d171c.mp3",
+    "static/media/Small Tom.mp3": "/drum-machine/static/media/Small Tom.c06aaf04c8c0411b2353.mp3",
+    "static/media/Hi Hat.mp3": "/drum-machine/static/media/Hi Hat.fc95f99693cd6c44c403.mp3",
+    "static/media/Punch.mp3": "/drum-machine/static/media/Punch.2c5a28b09f6f5d46ff95.mp3",
+    "static/media/Sticks.mp3": "/drum-machine/static/media/Sticks.93deb8794b43141ef01c.mp3",
+    "static/media/Bass.mp3": "/drum-machine/static/media/Bass.37e76115281fcd4b70b4.mp3",
+    "static/media/Snare.mp3": "/drum-machine/static/media/Snare.548f262c91add58de820.mp3",
+    "index.html": "/drum-machine/index.html",
+    "main.2f0acf25.css.map": "/drum-machine/static/css/main.2f0acf25.css.map",
+    "main.a4763035.js.map": "/drum-machine/static/js/main.a4763035.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f0acf25.css",
+    "static/js/main.a4763035.js"
+  ]
+}
