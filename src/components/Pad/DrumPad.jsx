@@ -24,8 +24,11 @@ const DrumPad = ({ id, text, sound, setDisplay, power, volume }) => {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", startSound);
-  });
+    window.addEventListener("keydown", startSound);
+    return () => {
+      window.removeEventListener("keydown", startSound);
+    };
+  }, [power]);
 
   return (
     <div
